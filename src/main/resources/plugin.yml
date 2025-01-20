@@ -1,0 +1,6 @@
+name: OverrideDoTileDrop
+version: '1'
+main: xyz.simnple.overrideDoTileDrop.OverrideDoTileDrop
+api-version: '1.21'
+authors: [ Simnple ]
+description: Override doTileDrop to allow shulker box drops
