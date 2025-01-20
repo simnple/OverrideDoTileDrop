@@ -1,11 +1,17 @@
 package xyz.simnple.overrideDoTileDrop;
 
+import net.kyori.adventure.text.Component;
+import org.bukkit.Bukkit;
 import org.bukkit.GameRule;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockState;
+import org.bukkit.block.ShulkerBox;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.BlockStateMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class OverrideDoTileDrop extends JavaPlugin implements Listener {
@@ -27,7 +33,7 @@ public final class OverrideDoTileDrop extends JavaPlugin implements Listener {
             return;
         }
 
-        if (e.getBlock().getType() != Material.SHULKER_BOX) {
+        if (!(e.getBlock().getState() instanceof ShulkerBox)) {
             return;
         }
 
